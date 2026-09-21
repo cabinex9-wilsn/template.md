@@ -35,6 +35,10 @@
 
 ## How you are graded
 
+Name each way this work is graded. Cite `rubrics/<id>.md` only for a method that uses a rubric.
+
+### Method
+
 ...
 
 ## Appendix
