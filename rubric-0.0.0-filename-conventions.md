@@ -24,38 +24,40 @@ Every markdown file in this repo except `README.md` and `LICENSE`. Those two nam
 
 ## The number
 
-A name carries three numbers: `folder.group.file`.
+Each added number is a level deeper.
 
-- `folder` is the category. `0` is the repo root. `1` is `ideas/`. `2` is `rubrics/`.
-- `group` is the subfolder, or `0` when the file sits directly in the category.
-- `file` is the file within that group. `0` is the index or the parent of the group. `1` and up are the other files, in the order they are used.
+- A shorter number is the parent.
+- A longer number that starts with the parent is inside it.
+- `2` is the rubrics catalog. `2.1` is the workflow rubric inside it. `2.1.2` is a file inside that workflow.
+- Do not add `.0` to make a parent. Same length means peers. `2.1.0` and `2.1.2` would be peers. `2.1` and `2.1.2` are parent and child.
 
-`0.0.0` is this file. It is the root of the scheme: folder 0, group 0, file 0.
+`0.0.0` is this file. It has no children. It is not a parent of the other files.
 
 ## The filename
 
-`{type}-{folder}.{group}.{file}-{slug}.md`
+`{type}-{number}-{slug}.md`
 
 - `type` is the kind of file. It is the first word. A grading file is `rubric`. A section template is `template`.
+- `number` is the place in the tree, as above.
 - `slug` is the stable short name. It matches the `Id` inside the file.
 - The `Id` does not change when the number changes. Cite the filename, not `rubrics/<id>.md`.
 
 ## Assigned names
 
-| Number | File |
-| --- | --- |
-| 0.0.0 | rubric-0.0.0-filename-conventions.md |
-| 1.0.1 | ideas/template-1.0.1-draft-idea.md |
-| 2.0.0 | rubrics/rubric-2.0.0-index.md |
-| 2.0.1 | rubrics/rubric-2.0.1-template.md |
-| 2.1.0 | rubrics/rubric-2.1.0-workflow-design.md |
-| 2.1.1 | rubrics/rubric-2.1.1-deterministic-code.md |
-| 2.1.2 | rubrics/rubric-2.1.2-autonomous-worker-node.md |
-| 2.1.3 | rubrics/rubric-2.1.3-local-gpu.md |
-| 2.1.4 | rubrics/rubric-2.1.4-subscription-model.md |
-| 2.1.5 | rubrics/rubric-2.1.5-pay-per-use.md |
+| Number | File | Inside |
+| --- | --- | --- |
+| 0.0.0 | rubric-0.0.0-filename-conventions.md | repo root |
+| 1.1 | ideas/template-1.1-draft-idea.md | ideas |
+| 2 | rubrics/rubric-2-index.md | rubrics |
+| 2.0 | rubrics/rubric-2.0-template.md | the rubric catalog |
+| 2.1 | rubrics/rubric-2.1-workflow-design.md | the rubric catalog |
+| 2.1.1 | rubrics/rubric-2.1.1-deterministic-code.md | the workflow |
+| 2.1.2 | rubrics/rubric-2.1.2-autonomous-worker-node.md | the workflow |
+| 2.1.3 | rubrics/rubric-2.1.3-local-gpu.md | the workflow |
+| 2.1.4 | rubrics/rubric-2.1.4-subscription-model.md | the workflow |
+| 2.1.5 | rubrics/rubric-2.1.5-pay-per-use.md | the workflow |
 
-Group `2.1` is the workflow. `2.1.0` is the parent. `2.1.1` through `2.1.5` follow the method order: deterministic code, code and Jev, local GPU, subscription model, pay-per-use tokens.
+`2.1.1` through `2.1.5` follow the method order: deterministic code, code and Jev, local GPU, subscription model, pay-per-use tokens.
 
 ## Criteria
 
@@ -71,9 +73,9 @@ Group `2.1` is the workflow. `2.1.0` is the parent. `2.1.1` through `2.1.5` foll
 
 | Level | Meaning |
 | --- | --- |
-| Missing | The filename has no `folder.group.file` number. |
-| Partial | The number is present but the file is in a different folder or group than the number says. |
-| Met | The number matches this rubric, and the file is in the folder that number names. |
+| Missing | The number does not show what the file is inside. |
+| Partial | The number is one segment longer or shorter than its real parent, or a trailing `.0` is used to mean parent. |
+| Met | The parent has the shorter number. This file adds one segment. An AI can see the subset without loading another file. |
 
 ## Evidence
 
