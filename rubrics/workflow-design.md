@@ -39,7 +39,7 @@ Each step is input, process, or output.
 Each step uses the lightest method that still does that step well. Steps may combine methods. Heavier methods need a reason the lighter one cannot do the job.
 
 1. Deterministic code
-2. Typesafe AI Jev decision making, using the 3-primitive structure
+2. TypeSafe Jev decision making. Jev is the System One model. The three primitives are Choice (one option from a list), Score (a level on a scale), and Noul (the probability a statement is true). See https://docs.typesafe.ai/primitives.md
 3. Local GPU
 4. Subscription-based model, the lowest-cost model that does the job well
 5. Pay-per-use tokens
@@ -76,4 +76,4 @@ The steps, the method chosen for each step, and the reason for any heavier metho
 
 ## Out of scope
 
-Whether the workflow's subject-matter output is good. Which other grading methods apply to that output. The names of the 3 primitives, until they are written down.
+Whether the workflow's subject-matter output is good. Which other grading methods apply to that output.
