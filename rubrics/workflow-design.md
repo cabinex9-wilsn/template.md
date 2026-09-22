@@ -43,10 +43,12 @@ Settings that should change live in a config or parameter file, and that file is
 Each step uses the lightest method that still does that step well. Steps may combine methods. Heavier methods need a reason the lighter one cannot do the job.
 
 1. Deterministic code
-2. TypeSafe Jev decision making. Jev is the System One model. The three primitives are Choice (one option from a list), Score (a level on a scale), and Noul (the probability a statement is true). See https://docs.typesafe.ai/primitives.md
+2. TypeSafe Jev decision making, including code and Jev together. Jev is the System One model. The three primitives are Choice (one option from a list), Score (a level on a scale), and Noul (the probability a statement is true). See https://docs.typesafe.ai/primitives.md. When the step is an autonomous worker node, load rubrics/autonomous-worker-node.md.
 3. Local GPU
 4. Subscription-based model, the lowest-cost model that does the job well
 5. Pay-per-use tokens
+
+Each method has its own rubric. Load that file only when the step uses that method. The code-and-Jev worker is specified. The other method rubrics are not written yet.
 
 | Level | Meaning |
 | --- | --- |
