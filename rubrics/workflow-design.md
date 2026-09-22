@@ -26,13 +26,17 @@ Workflow designs and orchestrator handoffs.
 
 ### Modular steps
 
-Each step is input, process, or output.
+Each step is an input, a process, or an output.
+
+A step receives every value it uses. A variable or attribute is passed in. It is never read from a global or shared place. Values created inside the step stay inside the step.
+
+Settings that should change live in a config or parameter file, and that file is passed in with the other inputs. Change the file to change the run. The step stays the same, so it can be reused or exchanged without rewriting it.
 
 | Level | Meaning |
 | --- | --- |
-| Missing | The work is one blob. Input, process, and output cannot be separated. |
-| Partial | Steps exist, but a step mixes concerns or cannot be rerun on its own. |
-| Met | Every step is input, process, or output, and each can be understood and rerun on its own. |
+| Missing | Steps are not separable, or a step reads a value it was not given. |
+| Partial | Steps are separable, but a step still depends on a hidden value, or changing its behavior means editing the step instead of its config. |
+| Met | Each step is input, process, or output. Every value it uses is passed in, including its config. A different config file is enough to reuse or exchange the step. |
 
 ### Minimum effective method
 
@@ -72,7 +76,7 @@ The orchestrator delegates the next step. The handoff is the task plus paths to 
 
 ## Evidence
 
-The steps, the method chosen for each step, and the reason for any heavier method.
+The steps, the method chosen for each step, and the reason for any heavier method. For a modular step, the inputs it receives and the config or parameter file passed into it.
 
 ## Out of scope
 
