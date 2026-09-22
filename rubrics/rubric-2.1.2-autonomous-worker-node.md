@@ -16,7 +16,7 @@ The step is an autonomous worker node, or you are grading one. This is the metho
 
 ## Do not load when
 
-The step is only deterministic code, only a local GPU, or only a language model. Those methods have their own rubrics. Do not load this to grade the shape of a workflow. Use rubrics/workflow-design.md for that.
+The step is only deterministic code, only a local GPU, or only a language model. Those methods have their own rubrics. Do not load this to grade the shape of a workflow. Use rubrics/rubric-2.1.0-workflow-design.md for that.
 
 ## Applies to
 

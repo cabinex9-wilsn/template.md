@@ -35,7 +35,7 @@
 
 ## How you are graded
 
-Name each way this work is graded. Cite `rubrics/<id>.md` only for a method that uses a rubric.
+Name each way this work is graded. Cite the rubric filename from the catalog only for a method that uses a rubric.
 
 ### Method
 
