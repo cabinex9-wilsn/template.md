@@ -38,3 +38,7 @@ Jev is TypeSafe's System One model. It answers typed questions about a state. Ch
 - [rubrics/rubric.md](rubrics/rubric.md) — template for one rubric scope
 - [rubrics/workflow-design.md](rubrics/workflow-design.md) — rubric for designing a workflow
 - [rubrics/autonomous-worker-node.md](rubrics/autonomous-worker-node.md) — code-and-Jev autonomous worker node
+- [rubrics/deterministic-code.md](rubrics/deterministic-code.md) — framework for the deterministic-code method
+- [rubrics/local-gpu.md](rubrics/local-gpu.md) — framework for the local-GPU method
+- [rubrics/subscription-model.md](rubrics/subscription-model.md) — framework for the subscription-model method
+- [rubrics/pay-per-use.md](rubrics/pay-per-use.md) — framework for the pay-per-use method

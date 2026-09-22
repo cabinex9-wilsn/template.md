@@ -44,11 +44,11 @@ Each step uses the lightest method that still does that step well. Steps may com
 
 Load a method's rubric only when the step uses that method.
 
-1. Deterministic code. Rubric not written.
+1. Deterministic code. Rubric: [deterministic code](deterministic-code.md).
 2. TypeSafe Jev, including code and Jev together. Jev is the System One model. The three primitives are Choice (one option from a list), Score (a level on a scale), and Noul (the probability a statement is true). See [TypeSafe primitives](https://docs.typesafe.ai/primitives.md). Rubric: [autonomous worker node](autonomous-worker-node.md).
-3. Local GPU. Rubric not written.
-4. Subscription-based model, the lowest-cost model that does the job well. Rubric not written.
-5. Pay-per-use tokens. Rubric not written.
+3. Local GPU. Rubric: [local GPU](local-gpu.md).
+4. Subscription-based model, the lowest-cost model that does the job well. Rubric: [subscription model](subscription-model.md).
+5. Pay-per-use tokens. Rubric: [pay-per-use tokens](pay-per-use.md).
 
 | Level | Meaning |
 | --- | --- |
